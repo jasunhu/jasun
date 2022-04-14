@@ -31,11 +31,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
+          
+      - name: '安装依赖'
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       # Runs a set of commands using the runners shell
       - name: '启动'
-        run: |
-          print(123)
-       # sudo cp -p ./chromedriver /usr/bin
-       # chmod -R 777 /usr/bin/chromedriver
-#           python ./push.py
+        run: python push.py
