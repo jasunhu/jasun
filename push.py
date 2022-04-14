@@ -46,9 +46,6 @@ def main():
 """
     push(msg,"HuZhiCheng")
 
-def main_handler(event, context):
-    main.main()
-
 if __name__ == '__main__':
    main()
 
