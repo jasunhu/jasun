@@ -33,6 +33,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: '启动'
         run: |
-          sudo cp -p ./chromedriver /usr/bin
-          chmod -R 777 /usr/bin/chromedriver
+       # sudo cp -p ./chromedriver /usr/bin
+       # chmod -R 777 /usr/bin/chromedriver
           python ./push.py
