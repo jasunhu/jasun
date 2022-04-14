@@ -1,21 +1,21 @@
-import json,requests
+import json,requests,os
 
 def push(text,wecom_touid='@all'):
     # 企业id
-    wecom_cid = "wwa872c89327cec783"  
+    WECOM_CID = os.environ['WECOM_CID']  
     # 应用id
-    wecom_aid = "1000003"
-    wecom_secret = "PKd-d_k__zmA0YXE7ld6VmMDU2RKA8-XEP9cn49mVTY"
+    WECOM_AID = os.environ['WECOM_AID']
+    WECOM_SECRET = os.environ['WECOM_SECRET']
 
 
-    get_token_url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={wecom_cid}&corpsecret={wecom_secret}"
+    get_token_url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={WECOM_CID}&corpsecret={WECOM_SECRET}"
     response = requests.get(get_token_url).content
     access_token = json.loads(response).get('access_token')
     if access_token and len(access_token) > 0:
         send_msg_url = f'https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={access_token}'
         data = {
             "touser":wecom_touid,
-            "agentid":wecom_aid,
+            "agentid":WECOM_AID,
             "msgtype":"text",
             "text":{
                 "content":text

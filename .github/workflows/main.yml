@@ -40,3 +40,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: '启动'
         run: python push.py
+        env:
+            WECOM_CID:${{secrets.WECOM_CID}}
+            WECOM_AID:${{secrets.WECOM_AID}}
+            WECOM_SECRET:${{secrets.WECOM_SECRET}}
