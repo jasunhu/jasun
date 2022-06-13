@@ -28,8 +28,8 @@ def push(text,wecom_touid='@all'):
         return False
 
 def main():
-    msg = """早（8点-）:
-        8点学习强国，控制在15分钟以内
+    msg = """早（6点-）:
+        6点打卡，控制在15分钟以内
         8点40上班，整理待办/撰写感受
 
 中（11点半-）:
