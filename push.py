@@ -28,7 +28,7 @@ def push(text,wecom_touid='@all'):
         return False
 
 def main():
-    msg = """早（6点-）:
+    msg = """早（6点半-）:
         6点打卡，控制在15分钟以内
         8点40上班，整理待办/撰写感受
 
