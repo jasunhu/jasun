@@ -1,2 +1,2 @@
-vmess=abc.jasun.tk:443, method=chacha20-poly1305, password=36ca7d6d-b580-41e5-8de1-ca9b89d2f34e, obfs=wss, obfs-uri=/9227bd/, obfs-host=abc.jasun.ga, tag=甲骨云
+
 vmess=a.jasun.tk:443, method=chacha20-poly1305, password=19f27899-8b0d-4b53-a6f6-6b15231761ae, obfs=wss, obfs-uri=/c167711/, obfs-host=a.jasun.ga, tag=微软云
